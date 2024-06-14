@@ -61,7 +61,7 @@ public class DecisionTree {
         return tree;
     }
 
-    public void prediction()
+    public void weatherPrediction()
     {   
         LinkedBinaryTree<String> current = tree;
         System.out.println("Weather Prediction!");
@@ -101,8 +101,7 @@ public class DecisionTree {
                         current = tree;
                         restarted = true;
                         break;
-                    } else if(answer.equals("back") || answer.equals("prev"))
-                    {
+                    } else if(answer.equals("back") || answer.equals("prev")){
                         System.out.println("\nBack to the previous question!");
                         current = current.getParent();
                         break;
