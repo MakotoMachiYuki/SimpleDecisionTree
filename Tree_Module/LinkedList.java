@@ -49,6 +49,7 @@ public class LinkedList<T> {
 		}
 	}
 
+    //fungsi yang ditambah untuk menghitung ukuran linkedlistnya
     public int size()
     {   
         int count = 0;

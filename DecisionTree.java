@@ -6,13 +6,11 @@ public class DecisionTree {
     private LinkedBinaryTree<String> tree;
     Scanner sn = new Scanner(System.in);
 
-    DecisionTree()
-    {
+    DecisionTree(){
         this.tree = WeatherQuestion();
     }
 
-    public LinkedBinaryTree<String> WeatherQuestion()
-    {
+    public LinkedBinaryTree<String> WeatherQuestion(){
         String q1 = "Temp (celcius) [0 - 50] in celcius degrees";
         String q2 = "Humidity [30 - 90] in %rh";
         String q3 = "Cloud Density: \n1.Not Dense \n2.Dense";
@@ -63,8 +61,7 @@ public class DecisionTree {
         return tree;
     }
 
-    public void weatherPrediction()
-    {   
+    public void weatherPrediction(){   
         LinkedBinaryTree<String> current = tree;
         System.out.println("Weather Prediction!");
 
