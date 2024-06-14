@@ -86,7 +86,6 @@ public class DecisionTree {
                     System.out.println("\"exit\" or \"end\" to exit the decision tree");
                     System.out.println("\"back\" or \"prev\" to return to the previous question");
                     System.out.println("Press any button! to start the decision tree!");
-                    System.out.println();
                     sn.nextLine();
                     enter = true;
                 }
@@ -146,14 +145,14 @@ public class DecisionTree {
 
             if(exit == false){
                 System.out.println("\nPrediction is finished!");
-                System.out.println("The result: " + current.getRoot() + " !");
+                System.out.println("The result: " + current.getRoot() + "!");
             } else if (exit == true){
                 finished = true;
             }
         
         
             System.out.println("\nDo you want to test it again?");
-            System.out.println("Input:\n1.Yes \n2.\"Back\" to last question\n3.No or any other input to exit");
+            System.out.println("Input:\n1.Yes \n2.\"Back\" to last question\n3.No or any other input to exit\n");
             String doItAgain = sn.nextLine();
             doItAgain = doItAgain.toLowerCase();
 
@@ -166,7 +165,7 @@ public class DecisionTree {
                 current = current.getParent();
             } else{
                 finished = true;
-                System.out.println("Exited the Decison Tree");
+                System.out.println("Exited the Decison Tree\n");
             }
         }
     }   
