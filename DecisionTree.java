@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import Tree_Module.LinkedBinaryTree;
+
 public class DecisionTree {
     private LinkedBinaryTree<String> tree;
     Scanner sn = new Scanner(System.in);
