@@ -57,6 +57,15 @@ public class DecisionTree {
         n4.setParent(n2);
         n5.setParent(n4h);
         n6.setParent(n4h);
+        n7.setParent(n6);
+        n8.setParent(n6);
+        n9.setParent(n5);
+        n10.setParent(n5);
+        n11.setParent(n3);
+        n12.setParent(n3);
+        n13.setParent(n4);
+        n14.setParent(n4);
+
 
         return tree;
     }
