@@ -22,8 +22,8 @@ public class DecisionTree {
     public LinkedBinaryTree<String> WeatherQuestion(){
 
         //inisialisasi semua pertanyaannya
-        String q1 = "Temp (celcius) [0 - 50] in celcius degrees";
-        String q2 = "Humidity [30 - 90] in %rh";
+        String q1 = "Temp (celcius) [(-5) - 45] in celcius degrees";
+        String q2 = "Humidity [0 - 100] in %rh";
         String q3 = "Cloud Density: \n1.Not Dense \n2.Dense";
         String q4 = "Wind Speed [0 - 70] in knot";
         String q5 = "Cloud Clearance: \n1.Clear \n2.Dark"; 
@@ -207,6 +207,7 @@ public class DecisionTree {
                 System.out.println("The result: " + current.getElement() + "!");
             } else if (exit == true){
                 finished = true;
+                break;
             }
         
             //meminta user input jika user ingin menjalankan decision tree lagi
@@ -229,9 +230,9 @@ public class DecisionTree {
             //keluar dari decision tree dan memberhentikan program decision treenya
             else{
                 finished = true;
-                System.out.println("Exited the Decison Tree\n");
             }
         }
+        System.out.println("\nExited the Decison Tree\n");
     }   
 
 
@@ -244,11 +245,11 @@ public class DecisionTree {
         try{
             int value = Integer.parseInt(answer);
             
-            if(value < 0 || value > 50){
+            if(value < -5 || value > 45){
                 return null;
-            } else if (value >= 0 && value <= 25){
+            } else if (value >= -5 && value <= 25){
                 return "N";
-            } else if (value > 25 && value <= 50){
+            } else if (value > 25 && value <= 45){
                 return "Y";
             } else{
                 return null;
@@ -267,11 +268,11 @@ public class DecisionTree {
         try{
             int value = Integer.parseInt(answer);
             
-            if(value < 30 || value > 90){
+            if(value < 0 || value > 100){
                 return null;
-            } else if (value >= 30 && value <= 60){
+            } else if (value >= 0 && value <= 60){
                 return "Y";
-            } else if (value > 60 && value <= 90){
+            } else if (value > 60 && value <= 100){
                 return "N";
             } else{
                 return null;
